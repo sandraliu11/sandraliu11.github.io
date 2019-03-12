@@ -29,6 +29,17 @@
   </head>
   <body>
 
+  <script>
+	  $(document).ready(function() {
+		  $('#bt1').click(function() {
+			  $('#fr1').attr('action',
+					  'mailto:test@test.com?subject=' +
+					  $('#tb1').val() + '&body=' + $('#tb2').val());
+			  $('#fr1').submit();
+		  });
+	  });
+  </script>
+
 	<div id="colorlib-page">
 		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
 		<aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
@@ -42,6 +53,13 @@
 				</ul>
 			</nav>
 
+			<div class="colorlib-footer">
+				<ul>
+					<li><a href="https://github.com/sandraliu11"><i class="icon-github"></i></a></li>
+					<li><a href="https://www.linkedin.com/in/sandraliu11/"><i class="icon-linkedin"></i></a></li>
+					<li><a href="https://twitter.com/itsandraa11"><i class="icon-twitter"></i></a></li>
+				</ul>
+			</div>
 
 		</aside> <!-- END COLORLIB-ASIDE -->
 		<div id="colorlib-main">
@@ -52,23 +70,18 @@
 	            <h2 class="h4 font-weight-bold">Contact Information</h2>
 	          </div>
 	          <div class="w-100"></div>
-	          <div class="col-md-3">
-	            <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+	          <div class="col-md-6">
+	            <p><span>Address:</span> Temple University, College of Science & Technology, SERC 366</p>
 	          </div>
-	          <div class="col-md-3">
-	            <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+	          <div class="col-md-6">
+	            <p><span>Email:</span> <a href="mailto:sandraliu.site@gmail.com">sandraliu.site@gmail.com</a></p>
 	          </div>
-	          <div class="col-md-3">
-	            <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
-	          </div>
-	          <div class="col-md-3">
-	            <p><span>Website</span> <a href="#">yoursite.com</a></p>
-	          </div>
+
 	        </div>
 	        <div class="row block-9">
-	          <div class="col-md-6 order-md-last pr-md-5">
-	            <form action="#">
-	              <div class="form-group">
+	          <div class="col-md-8 order-md-last pr-md-5">
+	            <form action="mailto:sandraliu.site@gmail.com" method="GET">
+	              <!--<div class="form-group">
 	                <input type="text" class="form-control" placeholder="Your Name">
 	              </div>
 	              <div class="form-group">
@@ -79,17 +92,17 @@
 	              </div>
 	              <div class="form-group">
 	                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-	              </div>
+	              </div>-->
 	              <div class="form-group">
-	                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+	                <input id="bt1" type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
 	              </div>
 	            </form>
 	          
 	          </div>
 
-	          <div class="col-md-6">
+	          <!--<div class="col-md-6">
 	          	<div id="map"></div>
-	          </div>
+	          </div>-->
 	        </div>
 	      </div>
 	    </section>
